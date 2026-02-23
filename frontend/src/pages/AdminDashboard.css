@@ -1,0 +1,263 @@
+.admin-dashboard {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.admin-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.admin-header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.btn-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s;
+}
+
+.btn-back:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.btn-create-template {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: white;
+  color: #667eea;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.btn-create-template:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.admin-content {
+  padding: 40px 0;
+}
+
+.admin-content .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  color: #333;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.count-badge {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.empty-state p {
+  color: #999;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Templates Table */
+.templates-table {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.templates-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.templates-table thead {
+  background: #f8f9fa;
+}
+
+.templates-table th {
+  text-align: left;
+  padding: 16px 20px;
+  font-weight: 600;
+  color: #555;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.templates-table td {
+  padding: 16px 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.templates-table tbody tr {
+  transition: background 0.2s;
+}
+
+.templates-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.template-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.template-info strong {
+  color: #333;
+  font-size: 1rem;
+}
+
+.template-desc {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.category-badge {
+  background: #f0f0f0;
+  color: #666;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.status-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.status-btn.active {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-btn.inactive {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.status-btn:hover {
+  transform: scale(1.05);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-icon {
+  padding: 8px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.btn-icon.btn-edit:hover {
+  background: #667eea;
+  color: white;
+}
+
+.btn-icon.btn-delete:hover {
+  background: #f44336;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .templates-table {
+    overflow-x: auto;
+  }
+
+  .templates-table table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-header .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
